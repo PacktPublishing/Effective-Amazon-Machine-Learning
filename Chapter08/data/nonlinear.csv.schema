@@ -1,0 +1,16 @@
+{
+  "version" : "1.0",
+  "rowId" : null,
+  "rowWeight" : null,
+  "targetAttributeName" : "y",
+  "dataFormat" : "CSV",
+  "dataFileContainsHeader" : false,
+  "attributes" : [ {
+    "attributeName" : "x",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "y",
+    "attributeType" : "NUMERIC"
+  } ],
+  "excludedAttributeNames" : [ ]
+}

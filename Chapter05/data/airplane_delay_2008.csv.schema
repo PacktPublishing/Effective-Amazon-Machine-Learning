@@ -1,0 +1,52 @@
+{
+  "version" : "1.0",
+  "rowId" : null,
+  "rowWeight" : null,
+  "targetAttributeName" : "ArrDelay",
+  "dataFormat" : "CSV",
+  "dataFileContainsHeader" : true,
+  "attributes" : [ {
+    "attributeName" : "DayofMonth",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "DayOfWeek",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "DepTime",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "CRSDepTime",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "UniqueCarrier",
+    "attributeType" : "CATEGORICAL"
+  }, {
+    "attributeName" : "FlightNum",
+    "attributeType" : "CATEGORICAL"
+  }, {
+    "attributeName" : "TailNum",
+    "attributeType" : "TEXT"
+  }, {
+    "attributeName" : "DepDelay",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "Origin",
+    "attributeType" : "CATEGORICAL"
+  }, {
+    "attributeName" : "Dest",
+    "attributeType" : "CATEGORICAL"
+  }, {
+    "attributeName" : "Distance",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "TaxiIn",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "TaxiOut",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "ArrDelay",
+    "attributeType" : "NUMERIC"
+  } ],
+  "excludedAttributeNames" : [ ]
+}

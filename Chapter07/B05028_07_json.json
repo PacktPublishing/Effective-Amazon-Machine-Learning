@@ -1,0 +1,265 @@
+// -----------------------------------------------------------------------------
+//  JSON templates and outputs for chapter 7
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+//  Passing parameters using JSON files
+// -----------------------------------------------------------------------------
+
+{
+   "MLModelId": "",
+   "MLModelName": "",
+   "MLModelType": "",
+   "Parameters": {
+       "KeyName": ""
+   },
+   "TrainingDataSourceId": "",
+   "Recipe": "",
+   "RecipeUri": ""
+}
+
+// -----------------------------------------------------------------------------
+//  Creating the datasource
+// -----------------------------------------------------------------------------
+
+{
+   "DataSourceId": "",
+   "DataSourceName": "",
+   "DataSpec": {
+       "DataLocationS3": "",
+       "DataRearrangement": "",
+       "DataSchema": "",
+       "DataSchemaLocationS3": ""
+   },
+   "ComputeStatistics": true
+}
+
+
+{
+   "DataSourceId": "ch8_ames_housing_001",
+   "DataSourceName": "[DS] Ames Housing 001",
+   "DataSpec": {
+       "DataLocationS3":
+         "s3://aml.packt/data/ch8/ames_housing_training.csv",
+       "DataSchemaLocationS3":
+         "s3://aml.packt/data/ch8/ames_housing.csv.schema"
+   },
+   "ComputeStatistics": true
+}
+
+{
+   "DataSourceId": "ch8_ames_housing_002",
+   "DataSourceName": "[DS] Ames Housing 002",
+   "DataSpec": {
+       "DataLocationS3":
+         "s3://aml.packt/data/ch8/ames_housing_validate.csv",
+       "DataSchemaLocationS3":
+         "s3://aml.packt/data/ch8/ames_housing.csv.schema"
+   },
+   "ComputeStatistics": true
+}
+
+
+{
+   "DataSourceId": "ch8_ames_housing_003",
+   "DataSourceName": "[DS] Ames Housing training 003",
+   "DataSpec": {
+       "DataLocationS3":
+         "s3://aml.packt/data/ch8/ames_housing_shuffled.csv",
+       "DataRearrangement":
+         "{"splitting":{"percentBegin":0,"percentEnd":70}}",
+       "DataSchemaLocationS3":
+         "s3://aml.packt/data/ch8/ames_housing.csv.schema"
+   },
+   "ComputeStatistics": true
+}
+
+
+{
+   "DataSourceId": "ch8_ames_housing_004",
+   "DataSourceName": "[DS] Ames Housing validation 004",
+   "DataSpec": {
+       "DataLocationS3":
+         "s3://aml.packt/data/ch8/ames_housing_shuffled.csv",
+       "DataRearrangement":
+         "{"splitting":{"percentBegin":70,"percentEnd":100}}",
+   },
+   "ComputeStatistics": true
+}
+
+{
+   "DataSourceId": "ch8_ames_housing_001"
+}
+
+
+{
+   "Status": "COMPLETED",
+   "NumberOfFiles": 1,
+   "CreatedByIamUser": "arn:aws:iam::178277xxxxxxx:user/alexperrier",
+   "LastUpdatedAt": 1486834110.483,
+   "DataLocationS3": "s3://aml.packt/data/ch8/ames_housing_training.csv",
+   "ComputeStatistics": true,
+   "StartedAt": 1486833867.707,
+   "LogUri": "https://eml-prod-emr.s3.amazonaws.com/178277513911-ds-ch8_ames_housing_001/.....",
+   "DataSourceId": "ch8_ames_housing_001",
+   "CreatedAt": 1486030865.965,
+   "ComputeTime": 880000,
+   "DataSizeInBytes": 648150,
+   "FinishedAt": 1486834110.483,
+   "Name": "[DS] Ames Housing 001"
+}
+
+
+// -----------------------------------------------------------------------------
+//  Creating the model
+// -----------------------------------------------------------------------------
+
+{
+    "MLModelId": "ch8_ames_housing_001",
+    "MLModelName": "[MDL] Ames Housing 001",
+    "MLModelType": "REGRESSION",
+    "Parameters": {
+        "sgd.shuffleType": "auto",
+        "sgd.l2RegularizationAmount": "1.0E-06",
+        "sgd.maxPasses": "100"
+    },
+    "TrainingDataSourceId": "ch8_ames_housing_001",
+    "RecipeUri": "s3://aml.packt/data/ch8
+      /recipe_ames_housing_001.json"
+}
+
+
+// -----------------------------------------------------------------------------
+//  Evaluating our model with create-evaluation
+// -----------------------------------------------------------------------------
+
+
+{
+    "EvaluationId": "ch8_ames_housing_001",
+    "EvaluationName": "[EVL] Ames Housing 001",
+    "MLModelId": "ch8_ames_housing_001",
+    "EvaluationDataSourceId": "ch8_ames_housing_002"
+}
+
+"PerformanceMetrics": {
+    "Properties": {
+         "RegressionRMSE": "29853.250469108018"
+    }
+}
+
+// -----------------------------------------------------------------------------
+//  Generating the datasources template
+// -----------------------------------------------------------------------------
+
+
+{
+   "DataSourceId": "CH8_AH_training_00{k}",
+   "DataSourceName": "[DS AH] training 00{k}",
+   "DataSpec": {
+       "DataLocationS3": "s3://aml.packt/data/ch8/shuffled_{k}.csv",
+       "DataSchemaLocationS3":"s3://aml.packt/data/ch8
+        /ames_housing.csv.schema",
+       "DataRearrangement": "{"splitting":
+       {"percentBegin":0,"percentEnd":70}}"
+   },
+   "ComputeStatistics": true
+}
+
+{
+   "DataSourceId": "CH8_AH_evaluate_00{k}",
+   "DataSourceName": "[DS AH] evaluate 00{k}",
+   "DataSpec": {
+       "DataLocationS3": "s3://aml.packt/data/ch8/shuffled_{k}.csv",
+       "DataSchemaLocationS3":"s3://aml.packt/data/ch8
+       /ames_housing.csv.schema",
+       "DataRearrangement": "{"splitting":
+       {"percentBegin":70,"percentEnd":100}}"
+   },
+   "ComputeStatistics": true
+}
+
+// -----------------------------------------------------------------------------
+//  Generating the models template
+// -----------------------------------------------------------------------------
+
+
+{
+   "MLModelId": "CH8_AH_L2_00{k}",
+   "MLModelName": "[MDL AH L2] 00{k}",
+   "MLModelType": "REGRESSION",
+   "Parameters": {
+       "sgd.shuffleType": "auto",
+       "sgd.l1RegularizationAmount": "0.0",
+       "sgd.l2RegularizationAmount": "1.0E-06",
+       "sgd.maxPasses": "100"
+   },
+   "TrainingDataSourceId": "CH8_AH_training_00{k}",
+   "RecipeUri": "s3://aml.packt/data/ch8/recipe_ames_housing_001.json"
+}
+
+
+{
+   "MLModelId": "CH8_AH_L1_00{k}",
+   "MLModelName": "[MDL AH L1] 00{k}",
+   "MLModelType": "REGRESSION",
+   "Parameters": {
+       "sgd.shuffleType": "auto",
+       "sgd.l1RegularizationAmount": "1.0E-04",
+       "sgd.l2RegularizationAmount": "0.0",
+       "sgd.maxPasses": "100"
+   },
+   "TrainingDataSourceId": "CH8_AH_training_00{k}",
+   "RecipeUri": "s3://aml.packt/data/ch8/recipe_ames_housing_001.json"
+}
+
+// -----------------------------------------------------------------------------
+//  Generating the evaluations template
+// -----------------------------------------------------------------------------
+
+{
+   "EvaluationId": "CH8_AH_L2_00{k}",
+   "EvaluationName": "[EVL AH L2] 00{k}",
+   "MLModelId": "CH8_AH_L2_00{k}",
+   "EvaluationDataSourceId": "CH8_AH_evaluate_00{k}"
+}
+
+
+{
+   "EvaluationId": "CH8_AH_L1_00{k}",
+   "EvaluationName": "[EVL AH L1] 00{k}",
+   "MLModelId": "CH8_AH_L1_00{k}",
+   "EvaluationDataSourceId": "CH8_AH_evaluate_00{k}"
+}
+
+// -----------------------------------------------------------------------------
+//  Managing schema and recipe
+// -----------------------------------------------------------------------------
+
+"groups": {
+    "NUMERIC_VARS_QB_50":   "group('LotFrontage','KitchenAbvGr','BsmtFinSF1',
+                                  'GarageCars','1stFlrSF','ScreenPorch',
+                                  'LowQualFinSF','LotArea','OverallCond',
+                                  '2ndFlrSF','GarageArea','EnclosedPorch',
+                                  'HalfBath')",
+    "NUMERIC_VARS_QB_100": "group('BsmtFinSF2','WoodDeckSF','BsmtHalfBath',
+                                  'MiscVal','GrLivArea','Fireplaces')",
+    "NUMERIC_VARS_QB_500": "group('OverallQual')",
+    "NUMERIC_VARS_QB_20": "group('TotalBsmtSF')",
+    "NUMERIC_VARS_QB_200": "group('MSSubClass','OpenPorchSF','YearRemod/Add',
+                                  'BsmtFullBath','MasVnrArea')",
+    "NUMERIC_VARS_QB_10": "group('PoolArea','BedroomAbvGr','TotRmsAbvGrd',
+                                  'YearBuilt','MoSold','YrSold','GarageYrBlt',
+                                  'FullBath','BsmtUnfSF','3SsnPorch')"
+}
+
+// -----------------------------------------------------------------------------
+{
+    "groups" : {},
+    "assignments" : { },
+    "outputs" : [ "ALL_INPUTS" ]
+}
+
+
+
+

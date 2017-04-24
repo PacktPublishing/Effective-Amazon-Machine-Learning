@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+//  JSON templates and outputs for chapter 6
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+//  Python SDK
+// -----------------------------------------------------------------------------
+
+
+{
+   "ResponseMetadata": {
+       "RetryAttempts": 0,
+       "HTTPHeaders": {
+           "content-type": "application/x-amz-json-1.1",
+           "content-length": "143",
+           "date": "Tue, 10 Jan 2017 16:20:49 GMT",
+           "x-amzn-requestid": "bfab2af0-d750-11e6-b8c2-45ac3ab2f186"
+       },
+       "HTTPStatusCode": 200,
+       "RequestId": "bfab2af0-d750-11e6-b8c2-45ac3ab2f186"
+   },
+   "Prediction": {
+       "predictedScores": {
+           "0": 0.001197131467051804
+       },
+       "predictedLabel": "0",
+       "details": {
+           "PredictiveModelType": "BINARY",
+           "Algorithm": "SGD"
+       }
+   }
+}
+
+// -----------------------------------------------------------------------------
+
+{
+    "predictedScores": { "1": 0.810875654220581 },
+    "predictedLabel": "1",
+}

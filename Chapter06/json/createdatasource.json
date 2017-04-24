@@ -1,0 +1,9 @@
+{
+    "DataSourceId": "dts.ch6.ttnc.extd_train.002",
+    "DataSourceName": "dts.ch6.ttnc.extd_train.002",
+    "DataSpec": {
+        "DataLocationS3": "s3://aml.packt/data/ch6_extended_titanic_training_02.csv",
+        "DataSchemaLocationS3": "s3://aml.packt/data/ch6_extended_titanic_training_02.csv.schema"
+    },
+    "ComputeStatistics": true
+}

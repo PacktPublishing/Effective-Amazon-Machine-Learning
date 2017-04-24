@@ -1,0 +1,13 @@
+{
+    "MLModelId": "CH8_AH_L2_00{k}",
+    "MLModelName": "[MDL AH L2] 00{k}",
+    "MLModelType": "REGRESSION",
+    "Parameters": {
+        "sgd.shuffleType": "auto",
+        "sgd.l1RegularizationAmount": "0.0",
+        "sgd.l2RegularizationAmount": "1.0E-06",
+        "sgd.maxPasses": "100"
+    },
+    "TrainingDataSourceId": "CH8_AH_training_00{k}",
+    "RecipeUri": "s3://aml.packt/data/ch8/recipe_ames_housing_001.json"
+}

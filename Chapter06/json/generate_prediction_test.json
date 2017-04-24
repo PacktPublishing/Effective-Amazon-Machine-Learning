@@ -1,0 +1,7 @@
+{
+    "BatchPredictionId": "prd.ch6.ttnc_extd.test.009",
+    "OutputUri": "s3://aml.packt/",
+    "BatchPredictionDataSourceId": "dsrc.ch6.ttnc_extd.test.009",
+    "MLModelId": "mdl.ch6.ttnc_extd.009",
+    "BatchPredictionName": "Pred Titanic Ext test [009]"
+}

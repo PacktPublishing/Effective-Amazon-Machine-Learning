@@ -1,0 +1,37 @@
+{
+  "version" : "1.0",
+  "rowId" : "ID",
+  "rowWeight" : null,
+  "targetAttributeName" : "seedType",
+  "dataFormat" : "CSV",
+  "dataFileContainsHeader" : true,
+  "attributes" : [ {
+    "attributeName" : "ID",
+    "attributeType" : "CATEGORICAL"
+  }, {
+    "attributeName" : "area",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "perimeter",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "compactness",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "lengthOfKernel",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "widthOfKernel",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "asymmetryCoefficient",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "lengthOfKernelGroove",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "seedType",
+    "attributeType" : "CATEGORICAL"
+  } ],
+  "excludedAttributeNames" : [ ]
+}

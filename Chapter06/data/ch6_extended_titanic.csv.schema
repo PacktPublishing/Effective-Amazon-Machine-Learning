@@ -1,0 +1,52 @@
+{
+  "version" : "1.0",
+  "rowId" : null,
+  "rowWeight" : null,
+  "targetAttributeName" : "survived",
+  "dataFormat" : "CSV",
+  "dataFileContainsHeader" : true,
+  "attributes" : [ {
+    "attributeName" : "pclass",
+    "attributeType" : "CATEGORICAL"
+  }, {
+    "attributeName" : "survived",
+    "attributeType" : "BINARY"
+  }, {
+    "attributeName" : "name",
+    "attributeType" : "TEXT"
+  }, {
+    "attributeName" : "sex",
+    "attributeType" : "CATEGORICAL"
+  }, {
+    "attributeName" : "age",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "sibsp",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "parch",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "ticket",
+    "attributeType" : "TEXT"
+  }, {
+    "attributeName" : "cabin",
+    "attributeType" : "TEXT"
+  }, {
+    "attributeName" : "embarked",
+    "attributeType" : "CATEGORICAL"
+  }, {
+    "attributeName" : "is_age_missing",
+    "attributeType" : "BINARY"
+  }, {
+    "attributeName" : "log_fare",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "title",
+    "attributeType" : "CATEGORICAL"
+  }, {
+    "attributeName" : "deck",
+    "attributeType" : "CATEGORICAL"
+  } ],
+  "excludedAttributeNames" : []
+}

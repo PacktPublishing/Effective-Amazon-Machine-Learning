@@ -1,0 +1,337 @@
+{
+    "attributes": [
+        {
+            "attributeName": "Order",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "MSSubClass",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "MSZoning",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "LotFrontage",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "LotArea",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "Street",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Alley",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "LotShape",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "LandContour",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Utilities",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "LotConfig",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "LandSlope",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Neighborhood",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Condition1",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Condition2",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "BldgType",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "HouseStyle",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "OverallQual",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "OverallCond",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "YearBuilt",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "YearRemod/Add",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "RoofStyle",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "RoofMatl",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Exterior1st",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Exterior2nd",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "MasVnrType",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "MasVnrArea",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "ExterQual",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "ExterCond",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Foundation",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "BsmtQual",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "BsmtCond",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "BsmtExposure",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "BsmtFinType1",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "BsmtFinSF1",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "BsmtFinType2",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "BsmtFinSF2",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "BsmtUnfSF",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "TotalBsmtSF",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "Heating",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "HeatingQC",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "CentralAir",
+            "attributeType": "BINARY"
+        },
+        {
+            "attributeName": "Electrical",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "1stFlrSF",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "2ndFlrSF",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "LowQualFinSF",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "GrLivArea",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "BsmtFullBath",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "BsmtHalfBath",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "FullBath",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "HalfBath",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "BedroomAbvGr",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "KitchenAbvGr",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "KitchenQual",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "TotRmsAbvGrd",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "Functional",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Fireplaces",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "FireplaceQu",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "GarageType",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "GarageYrBlt",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "GarageFinish",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "GarageCars",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "GarageArea",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "GarageQual",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "GarageCond",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "PavedDrive",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "WoodDeckSF",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "OpenPorchSF",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "EnclosedPorch",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "3SsnPorch",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "ScreenPorch",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "PoolArea",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "PoolQC",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "Fence",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "MiscFeature",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "MiscVal",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "MoSold",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "YrSold",
+            "attributeType": "NUMERIC"
+        },
+        {
+            "attributeName": "SaleType",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "SaleCondition",
+            "attributeType": "CATEGORICAL"
+        },
+        {
+            "attributeName": "SalePrice",
+            "attributeType": "NUMERIC"
+        }
+    ],
+    "rowWeight": null,
+    "rowId": "Order",
+    "excludedAttributeNames": [
+        "BsmtFinSF2"
+    ],
+    "dataFileContainsHeader": true,
+    "dataFormat": "CSV",
+    "version": "1.0",
+    "targetAttributeName": "SalePrice"
+}

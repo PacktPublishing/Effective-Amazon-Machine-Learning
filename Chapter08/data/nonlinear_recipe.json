@@ -1,0 +1,19 @@
+{
+  "groups": {
+    "NUMERIC_VARS_QB_200": "group('X')"
+  },
+  "assignments": {},
+  "outputs": [
+    "quantile_bin(NUMERIC_VARS_QB_200,200)"
+  ]
+}
+
+
+{
+  "groups": {},
+  "assignments": {},
+  "outputs": [
+    "quantile_bin(ALL_NUMERIC,500)"
+  ]
+}
+

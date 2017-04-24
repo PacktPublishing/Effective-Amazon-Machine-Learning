@@ -1,0 +1,12 @@
+{
+    "MLModelName": "Model Titanic [E05_EXT]",
+    "TrainingDataSourceId": "dsrc.ch6.ttnc_ext.train.E05_EXT",
+    "Parameters": {
+        "sgd.shuffleType": "auto",
+        "sgd.l2RegularizationAmount": "1.0E-06",
+        "sgd.maxPasses": "100"
+    },
+    "RecipeUri": "s3://aml.packt/data/no_qb_recipe.json",
+    "MLModelId": "mdl.ch6.ttnc_ext.E05_EXT",
+    "MLModelType": "BINARY"
+}

@@ -1,0 +1,21 @@
+{
+    "DataSourceId": "",
+    "DataSourceName": "",
+    "DataSpec": {
+        "DatabaseInformation": {
+            "DatabaseName": "",
+            "ClusterIdentifier": ""
+        },
+        "SelectSqlQuery": "",
+        "DatabaseCredentials": {
+            "Username": "",
+            "Password": ""
+        },
+        "S3StagingLocation": "",
+        "DataRearrangement": "",
+        "DataSchema": "",
+        "DataSchemaUri": ""
+    },
+    "RoleARN": "",
+    "ComputeStatistics": true
+}

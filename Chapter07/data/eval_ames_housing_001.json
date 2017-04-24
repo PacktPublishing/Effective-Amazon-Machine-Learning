@@ -1,0 +1,6 @@
+{
+    "EvaluationId": "ch8_ames_housing_001",
+    "EvaluationName": "[EVL] Ames Housing 001",
+    "MLModelId": "ch8_ames_housing_001",
+    "EvaluationDataSourceId": "ch8_ames_housing_002"
+}

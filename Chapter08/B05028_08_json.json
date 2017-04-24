@@ -1,0 +1,111 @@
+// -----------------------------------------------------------------------------
+//  JSON templates and outputs for chapter 8
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+//  Choosing between RDS and Redshift
+// -----------------------------------------------------------------------------
+
+
+{
+    "DatabaseInformation": {
+      "DatabaseName": "string",
+      "ClusterIdentifier": "string"
+    },
+    "SelectSqlQuery": "string",
+    "DatabaseCredentials": {
+      "Username": "string",
+      "Password": "string"
+    },
+    "S3StagingLocation": "string",
+    "DataRearrangement": "string",
+    "DataSchema": "string",
+    "DataSchemaUri": "string"
+}
+
+
+// -----------------------------------------------------------------------------
+
+{
+    "DatabaseInformation": {
+      "DatabaseName": "string"
+      "InstanceIdentifier": "string",
+    },
+    "SelectSqlQuery": "string",
+    "DatabaseCredentials": {
+      "Username": "string",
+      "Password": "string"
+    },
+    "S3StagingLocation": "string",
+    "DataRearrangement": "string",
+    "DataSchema": "string",
+    "DataSchemaUri": "string",
+    "ResourceRole": "string",
+    "ServiceRole": "string",
+    "SubnetId": "string",
+    "SecurityGroupIds": ["string", ...]
+}
+
+
+// -----------------------------------------------------------------------------
+//  Establishing a baseline
+// -----------------------------------------------------------------------------
+
+{
+  "version" : "1.0",
+  "rowId" : null,
+  "rowWeight" : null,
+  "targetAttributeName" : "y",
+  "dataFormat" : "CSV",
+  "dataFileContainsHeader" : false,
+  "attributes" : [ {
+    "attributeName" : "x",
+    "attributeType" : "NUMERIC"
+  }, {
+    "attributeName" : "y",
+    "attributeType" : "NUMERIC"
+  } ],
+  "excludedAttributeNames" : [ ]
+}
+
+// -----------------------------------------------------------------------------
+{
+  "groups": {
+    "NUMERIC_VARS_QB_500": "group('x')"
+  },
+  "assignments": {},
+  "outputs": [
+    "ALL_CATEGORICAL",
+    "quantile_bin(NUMERIC_VARS_QB_500,500)"
+  ]
+}
+
+// -----------------------------------------------------------------------------
+//  Polynomial regression in Amazon ML
+// -----------------------------------------------------------------------------
+
+{
+    "version" : "1.0",
+    "rowId" : null,
+    "rowWeight" : null,
+    "targetAttributeName" : "y",
+    "dataFormat" : "CSV",
+    "dataFileContainsHeader" : false,
+    "attributes" : [ {
+            "attributeName" : "x",
+            "attributeType" : "NUMERIC"
+        }, {
+            "attributeName" : "y",
+            "attributeType" : "NUMERIC"
+        } ],
+    "excludedAttributeNames" : [ ]
+}
+
+// -----------------------------------------------------------------------------
+{
+    "attributeName" : "x{N}",
+    "attributeType" : "NUMERIC"
+}
+
+

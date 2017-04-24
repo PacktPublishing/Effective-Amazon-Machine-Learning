@@ -1,0 +1,21 @@
+{
+  "groups": {
+    "NUMERIC_VARS_QB_50": "group('LotFrontage','KitchenAbvGr','BsmtFinSF1','GarageCars','1stFlrSF','ScreenPorch','LowQualFinSF','LotArea','OverallCond','2ndFlrSF','GarageArea','EnclosedPorch','HalfBath')",
+    "NUMERIC_VARS_QB_100": "group('BsmtFinSF2','WoodDeckSF','BsmtHalfBath','MiscVal','GrLivArea','Fireplaces')",
+    "NUMERIC_VARS_QB_500": "group('OverallQual')",
+    "NUMERIC_VARS_QB_20": "group('TotalBsmtSF')",
+    "NUMERIC_VARS_QB_200": "group('MSSubClass','OpenPorchSF','YearRemod/Add','BsmtFullBath','MasVnrArea')",
+    "NUMERIC_VARS_QB_10": "group('PoolArea','BedroomAbvGr','TotRmsAbvGrd','YearBuilt','MoSold','YrSold','GarageYrBlt','FullBath','BsmtUnfSF','3SsnPorch')"
+  },
+  "assignments": {},
+  "outputs": [
+    "ALL_BINARY",
+    "ALL_CATEGORICAL",
+    "quantile_bin(NUMERIC_VARS_QB_50,50)",
+    "quantile_bin(NUMERIC_VARS_QB_100,100)",
+    "quantile_bin(NUMERIC_VARS_QB_500,500)",
+    "quantile_bin(NUMERIC_VARS_QB_20,20)",
+    "quantile_bin(NUMERIC_VARS_QB_200,200)",
+    "quantile_bin(NUMERIC_VARS_QB_10,10)"
+  ]
+}

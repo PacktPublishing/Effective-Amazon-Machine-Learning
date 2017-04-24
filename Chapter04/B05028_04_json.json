@@ -1,0 +1,127 @@
+// -----------------------------------------------------------------------------
+//  JSON templates and outputs for chapter 4
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+//  Granting permissions
+// -----------------------------------------------------------------------------
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AmazonML_s3:ListBucket",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "machinelearning.amazonaws.com"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::{YOUR_BUCKET_NAME}",
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": "*"
+                }
+            }
+        },
+        {
+            "Sid": "AmazonML_s3:GetObject",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "machinelearning.amazonaws.com"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::{YOUR_BUCKET_NAME}/*"
+        },
+        {
+            "Sid": "AmazonML_s3:PutObject",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "machinelearning.amazonaws.com"
+            },
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::{YOUR_BUCKET_NAME}/*"
+        }
+    ]
+}
+
+// -----------------------------------------------------------------------------
+//  Reusing the schema
+// -----------------------------------------------------------------------------
+
+
+{
+    "version" : "1.0",
+    "rowId" : null,
+    "rowWeight" : null,
+    "targetAttributeName" : "survived",
+    "dataFormat" : "CSV",
+    "dataFileContainsHeader" : true,
+    "attributes" : [ {
+        "attributeName" : "pclass",
+        "attributeType" : "CATEGORICAL"
+    }, {
+        "attributeName" : "survived",
+        "attributeType" : "BINARY"
+    }, {
+        "attributeName" : "name",
+        "attributeType" : "TEXT"
+    }, {
+        "attributeName" : "sex",
+        "attributeType" : "BINARY"
+    }, {
+        "attributeName" : "age",
+        "attributeType" : "NUMERIC"
+    }, {
+        "attributeName" : "sibsp",
+        "attributeType" : "NUMERIC"
+    }, {
+        "attributeName" : "parch",
+        "attributeType" : "NUMERIC"
+    }, {
+        "attributeName" : "ticket",
+        "attributeType" : "TEXT"
+    }, {
+        "attributeName" : "fare",
+        "attributeType" : "NUMERIC"
+    }, {
+        "attributeName" : "cabin",
+        "attributeType" : "TEXT"
+    }, {
+        "attributeName" : "embarked",
+        "attributeType" : "CATEGORICAL"
+    }, {
+        "attributeName" : "boat",
+        "attributeType" : "CATEGORICAL"
+    }, {
+        "attributeName" : "body",
+        "attributeType" : "NUMERIC"
+    }, {
+        "attributeName" : "home.dest",
+        "attributeType" : "TEXT"
+    } ],
+    "excludedAttributeNames" : ["home.dest", "body", "boat"]
+}
+
+// -----------------------------------------------------------------------------
+//  Creating an improved datasource
+// -----------------------------------------------------------------------------
+
+{
+    "attributeName" : "is_age_missing",
+    "attributeType" : "BINARY"
+}, {
+    "attributeName" : "log_fare",
+    "attributeType" : "NUMERIC"
+}, {
+    "attributeName" : "title",
+    "attributeType" : "CATEGORICAL"
+}, {
+    "attributeName" : "deck",
+    "attributeType" : "CATEGORICAL"
+}, {
+    "attributeName" : "family_size",
+    "attributeType" : "NUMERIC"
+}
+
+

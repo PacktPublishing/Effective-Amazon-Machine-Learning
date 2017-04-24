@@ -1,0 +1,10 @@
+{
+    "DataSourceId": "CH8_AH_evaluate_00{k}",
+    "DataSourceName": "[DS AH] evaluate 00{k}",
+    "DataSpec": {
+        "DataLocationS3": "s3://aml.packt/data/ch8/shuffled_{k}.csv",
+        "DataSchemaLocationS3":"s3://aml.packt/data/ch8/ames_housing.csv.schema",
+        "DataRearrangement": "{\"splitting\":{\"percentBegin\":70,\"percentEnd\":100}}"
+    },
+    "ComputeStatistics": true
+}

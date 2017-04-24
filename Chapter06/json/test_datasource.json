@@ -1,0 +1,10 @@
+{
+    "DataSpec": {
+        "DataLocationS3": "s3://aml.packt/data/ch6_extended_titanic.csv",
+        "DataSchemaLocationS3": "s3://aml.packt/data/ch6_extended_titanic.csv.schema",
+        "DataRearrangement": "{\"splitting\":{\"percentBegin\":80,\"percentEnd\":100}}"
+    },
+    "DataSourceName": "DS Titanic test [E05_EXT]",
+    "ComputeStatistics": true,
+    "DataSourceId": "dsrc.ch6.ttnc_ext.test.E05_EXT"
+}

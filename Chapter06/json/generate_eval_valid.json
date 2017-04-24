@@ -1,0 +1,6 @@
+{
+    "EvaluationId": "eval.ch6.ttnc_ext.valid.E05_EXT",
+    "EvaluationDataSourceId": "dsrc.ch6.ttnc_ext.valid.E05_EXT",
+    "EvaluationName": "Eval Titanic valid [E05_EXT]",
+    "MLModelId": "mdl.ch6.ttnc_ext.E05_EXT"
+}

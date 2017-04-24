@@ -1,0 +1,9 @@
+{
+    "groups" : {
+        "NUMERIC_VARS_QB_20" : "group('sibsp','parch')",
+        "NUMERIC_VARS_QB_100" : "group('age')",
+        "NUMERIC_VARS_QB_10" : "group('fare')"
+    },
+    "assignments" : { },
+    "outputs" : [ "ALL_BINARY", "ALL_CATEGORICAL", "quantile_bin(NUMERIC_VARS_QB_20,20)", "quantile_bin(NUMERIC_VARS_QB_100,100)", "quantile_bin(NUMERIC_VARS_QB_10,10)", "ALL_TEXT" ]
+}
